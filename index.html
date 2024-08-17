@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Guide - Comprehensive Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom: 3px solid #0056b3;
+        }
+        footer {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            border-top: 3px solid #0056b3;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section-box {
+            border: 2px solid #007bff;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #e9ecef;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section-header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            margin: -15px -15px 15px -15px;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 0.9em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comprehensive Git Guide</h1>
+    </header>
+
+    <div class="container">
+        <!-- Basic Git Workflow -->
+        <div class="section-box">
+            <div class="section-header">Basic Git Workflow</div>
+
+            <h3>1. Initialize a Repository</h3>
+            <div class="code-block">
+                <code>git init</code>
+            </div>
+            <p>Initialize a new Git repository in the current directory.</p>
+
+            <h3>2. Clone an Existing Repository</h3>
+            <div class="code-block">
+                <code>git clone &lt;repo-url&gt;</code>
+            </div>
+            <p>Clone a repository into a new directory.</p>
+
+            <h3>3. Check Repository Status</h3>
+            <div class="code-block">
+                <code>git status</code>
+            </div>
+            <p>Shows the current state of the working directory and staging area.</p>
+
+            <h3>4. Add Files to Staging Area</h3>
+            <div class="code-block">
+                <code>git add &lt;file-name&gt;</code>
+            </div>
+            <p>Add files to the staging area before committing.</p>
+
+            <h3>5. Commit Changes</h3>
+            <div class="code-block">
+                <code>git commit -m "Commit message"</code>
+            </div>
+            <p>Commit changes with a descriptive message.</p>
+
+            <h3>6. Push Changes to Remote</h3>
+            <div class="code-block">
+                <code>git push origin &lt;branch-name&gt;</code>
+            </div>
+            <p>Push changes to a remote repository.</p>
+
+            <h3>7. Pull Latest Changes</h3>
+            <div class="code-block">
+                <code>git pull origin &lt;branch-name&gt;</code>
+            </div>
+            <p>Fetch and integrate changes from a remote repository.</p>
+        </div>
+
+        <!-- Branch Management -->
+        <div class="section-box">
+            <div class="section-header">Branch Management</div>
+
+            <h3>1. Create a New Branch</h3>
+            <div class="code-block">
+                <code>git branch &lt;branch-name&gt;</code>
+            </div>
+            <p>Create a new branch.</p>
+
+            <h3>2. Switch Branches</h3>
+            <div class="code-block">
+                <code>git checkout &lt;branch-name&gt;</code>
+            </div>
+            <p>Switch to a different branch.</p>
+
+            <h3>3. Merge Branches</h3>
+            <div class="code-block">
+                <code>git merge &lt;branch-name&gt;</code>
+            </div>
+            <p>Merge changes from one branch into the current branch.</p>
+
+            <h3>4. Delete a Branch</h3>
+            <div class="code-block">
+                <code>git branch -d &lt;branch-name&gt;</code>
+            </div>
+            <p>Delete a branch.</p>
+        </div>
+
+        <!-- Git Collaboration -->
+        <div class="section-box">
+            <div class="section-header">Git Collaboration</div>
+
+            <h3>1. Fork a Repository</h3>
+            <p>Fork a repository on GitHub to make your own copy.</p>
+
+            <h3>2. Create a Pull Request</h3>
+            <p>Submit a pull request to propose changes to the original repository.</p>
+        </div>
+
+        <!-- Git Flow -->
+        <div class="section-box">
+            <div class="section-header">Git Flow</div>
+
+            <h3>1. Main Branch</h3>
+            <p>The production-ready branch.</p>
+
+            <h3>2. Develop Branch</h3>
+            <p>The branch where features and fixes are integrated before being pushed to `main`.</p>
+
+            <h3>3. Feature Branch</h3>
+            <p>A branch for developing new features.</p>
+
+            <h3>4. Release Branch</h3>
+            <p>A branch for preparing new production releases.</p>
+
+            <h3>5. Hotfix Branch</h3>
+            <p>A branch for fixing urgent bugs in the production code.</p>
+
+            <div class="code-block">
+                <code>git flow init</code> - Initialize Git Flow<br>
+                <code>git flow feature start &lt;feature-name&gt;</code> - Start a feature branch<br>
+                <code>git flow feature finish &lt;feature-name&gt;</code> - Finish a feature branch<br>
+                <code>git flow release start &lt;version&gt;</code> - Start a release branch<br>
+                <code>git flow release finish &lt;version&gt;</code> - Finish a release branch<br>
+                <code>git flow hotfix start &lt;version&gt;</code> - Start a hotfix branch<br>
+                <code>git flow hotfix finish &lt;version&gt;</code> - Finish a hotfix branch
+            </div>
+        </div>
+
+        <!-- Git Best Practices -->
+        <div class="section-box">
+            <div class="section-header">Git Best Practices</div>
+
+            <ul>
+                <li><strong>Commit Often:</strong> Commit your changes frequently, with clear and concise messages.</li>
+                <li><strong>Use Branches:</strong> Keep your `main` branch clean by using feature branches for development.</li>
+                <li><strong>Keep a Clean History:</strong> Rebase and squash commits to maintain a clean commit history.</li>
+                <li><strong>Write Descriptive Messages:</strong> Your commit messages should describe the “why” behind the change, not just the “what.”</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Comprehensive Git Guide. All rights reserved.</p>
+    </footer>
+</body>
+</html>
